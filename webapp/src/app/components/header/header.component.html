@@ -2,20 +2,4 @@
     <a routerLink="chat"> Generate</a>
     <a routerLink="about">About</a>
     <a routerLink="contact">Contact</a>
-    <a routerLink="login">login</a>
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-    <mat-icon
-        [matBadge]="itemsQuantity"
-        [matBadgeHidden]="!itemsQuantity"
-        matBadgeColor="warn"
-    >account_circle</mat-icon>
-    </button>
-    <mat-menu #menu="matMenu">
-            <div class="p-3 divide-y divide-solid">
-                <div class="pb-3 flex justify-between">
-                    <button class="button is-warning" (click)="logout()">logout</button>
-                </div>
-                    
-            </div>
-    </mat-menu>
 </mat-toolbar>
