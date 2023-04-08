@@ -18,40 +18,20 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
-import { FiltersComponent } from './pages/home/components/filters/filters.component';
-import { ProductBoxComponent } from './pages/home/components/product-box/product-box.component';
-import { CartComponent } from './pages/cart/cart.component';
-import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
 import { HttpClientModule } from '@angular/common/http';
 import {LayoutModule} from '@angular/cdk/layout';
 import { StartComponent } from './start/start/start.component';
-import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component'; 
 import { FormsModule } from '@angular/forms';
-import { ChatComponent } from './chat/chat.component';
-import { AdminComponent } from './admin/admin.component';
-import { ReplyFormComponent } from './admin/reply-form/reply-form.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
-    ProductsHeaderComponent,
-    FiltersComponent,
-    ProductBoxComponent,
-    CartComponent,
     StartComponent,
-    LoginComponent,
     AboutComponent,
-    ContactComponent,
-    ChatComponent,
-    AdminComponent,
-    ReplyFormComponent
   ],
   imports: [
     BrowserModule,
@@ -72,7 +52,7 @@ import { ReplyFormComponent } from './admin/reply-form/reply-form.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [CartService,StoreService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

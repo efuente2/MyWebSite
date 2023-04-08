@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Cart, CartItem } from 'src/app/models/cart.model';
-import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +10,6 @@ import { CartService } from 'src/app/services/cart.service';
 export class HeaderComponent {
   private _cart: Cart = { items: [] };
   itemsQuantity = 0;
-  ADMINLOGIN: boolean = this.cartService.getAdminLoginStatus();
 
   @Input() 
   get cart(): Cart{
@@ -27,23 +25,12 @@ export class HeaderComponent {
   }
 
 
-  constructor(private cartService: CartService, private router:Router) { }
+  constructor( private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  getTotal(items: Array<CartItem>): number {
-    return this.cartService.getTotal(items);
-  }
 
-  onClearCart(): void{
-    this.cartService.clearCart();
-  }
-
-  logout(){
-    localStorage.removeItem('Admin');
-    this.router.navigate(["/login"]);
-  }
   
 
 }
